@@ -5,11 +5,13 @@ README
 
 logic ucb is a a version of a much more known languag "prologue"
 logic is a declarative programming languages that essentially has two functions 
-	1- fact
-	2- quer
+	1- fact	
+	2- query
 
 The working principal is : by declaring facts,  you can ask queries
 Logic uses the scheme interpreter i have built because in logic every 'relation' is a scheme list.
+
+To find the facts , query follows a two step process of which the steps are named : Search and Unify
 
 ======================================================
 END
