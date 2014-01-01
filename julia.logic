@@ -1,0 +1,37 @@
+; SORTED
+
+(fact (remove-from-every ((?a . ?first-small) . ?rest-big) (?first-small . ?rest-small))
+    (remove-from-every ?rest-big ?rest-small))
+
+(fact (remove-from-every () ())
+
+(fact (sorted (() . ?rest))
+		(sorted ?rest))
+
+(fact (sorted ?list ?smaller-list)
+	(remove-from every ?list ?smaller-list))
+
+
+
+
+
+; REVERSE
+
+(fact (append () ?z ?z))
+
+(fact (append (?first . ?rest1) ?b (?first . ?c))
+		(append ?rest1 ?b ?c))
+
+(fact (reverse () () ))
+ 
+(fact (reverse (?a . ?rest) ?reversedlist)
+        (reverse ?rest ?rest2) 
+        (append ?rest2 (?a) ?reversedlist))
+
+
+; INTERLEAVING
+
+
+
+
+

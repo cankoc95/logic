@@ -1,0 +1,60 @@
+fact (reverse () () ))
+ 
+(fact (reverse (?a . ?rest) ?reversedlist)
+        (reverse ?rest ?rest2) 
+        (append ?rest2 ?a ?reversedlist)
+
+
+
+
+
+;Flatten
+
+(fact (flatten () ()))
+
+; for this query : (query(flatten (a (a)) a) (a a a))
+
+(fact (flatten ((?a .?b) ?c) ?wtf)
+		(flatten (?a . ?b) ?a-list)
+		(flatten ?c ?c-list)
+		(append ?a-list ?c-list ?wtf))
+
+; for this (query (flatten (a (a) a) (a a a)))
+
+(fact (flatten (a . ?rest) (a . ?lst)
+  	   (flatten ?rest ?lst)))
+
+
+;SORTED
+
+logic > (fact (<= a a))
+logic > (fact (<= a b))
+logic > (fact (<= a c))
+logic > (fact (<= b b))
+logic > (fact (<= b c))
+logic > (fact (<= c c))
+
+
+(fact (sorted ()))
+
+(fact (sorted (?a)))
+
+;(query (sorted (a b b c)))
+;(query (sorted (a b c)))
+
+
+(fact (sorted (?a ?b . ?rest)) ; this is how we break up a list 
+	  (<= ?a ?b)
+	  (sorted (?b . ?rest))
+	  (sorted ?rest))
+
+
+
+
+
+
+;(query (sorted (b a c)))
+
+; READ IF YOU FEEL SHAKY
+; read append vs cons vs list 
+; quick guide on logic
