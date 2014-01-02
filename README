@@ -3,15 +3,15 @@ README
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-logic ucb is a a version of a much more known language "prologue"
-logic is a declarative programming languages that essentially has two functions
+logic ucb is a simpler version of a much more known language "prologue" and was developed using python3.
+logic is a declarative programming language that essentially has two functions
 	1- fact	
 	2- query
 
-The working principal is : by declaring facts,  you can ask queries
+The work principal is : based on the facts you declare, you can ask queries.
 Logic uses the scheme interpreter i have built because in logic every 'relation' is a scheme list.
 
-To find the facts , query follows a two step process of which the steps are named : Search and Unify
+To find the facts , query follows a two step process and the steps are : Search and Unify
 
 ======================================================
 END
